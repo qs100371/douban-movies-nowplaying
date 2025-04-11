@@ -1,3 +1,5 @@
+import os
+import pytz
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -195,7 +197,7 @@ def generate_html(movies):
 
 
 
-import pytz
+
 from datetime import datetime
 
 def save_html(html_content, filename="docs/douban_movies.html"):
