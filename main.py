@@ -85,6 +85,13 @@ def generate_html(movies):
                 color: #007722;
                 margin-bottom: 30px;
             }}
+            a {{
+                color: #007722;
+                text-decoration: none;
+            }}
+            a:hover {{
+                text-decoration: underline;
+            }}
             .movie-container {{
                 display: flex;
                 flex-wrap: wrap;
