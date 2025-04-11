@@ -2,11 +2,10 @@ name: Deploy Douban Movies
 
 on:
   schedule:
-    # 每天 UTC 时间 8:00（北京时间 16:00）自动运行
     - cron: '0 8 * * *'
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch:
   push:
-    branches: [ main ]  # 代码推送时也触发
+    branches: [ main ]
 
 jobs:
   deploy:
@@ -15,6 +14,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史记录
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -33,6 +34,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # 发布当前目录
-          keep_files: true  # 保留旧文件
-          destination_dir: .  # 部署到根目录
+          publish_dir: ./
+          publish_branch: gh-pages
+          force_orphan: true
+          keep_files: false  # 完全替换分支内容
