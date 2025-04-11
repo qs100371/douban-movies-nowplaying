@@ -284,7 +284,7 @@ def generate_html(movies):
     
     from datetime import datetime
     update_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    
+    update_time = get_beijing_time()
     movies_html = ""
     for movie in movies:
         movie_html = f"""
