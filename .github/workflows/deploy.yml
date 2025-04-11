@@ -1,3 +1,5 @@
+https://qs100371.vip/douban-movies-nowplaying/douban_hot_movies.html
+
 name: Deploy Douban Movies
 
 on:
@@ -35,10 +37,21 @@ jobs:
         run: python main.py
 
       # 步骤5：部署到GitHub Pages
+     - name: Create deploy branch if not exists
+        run: |
+          if ! git ls-remote --heads origin | grep -q "gh-pages"; then
+            git checkout --orphan gh-pages
+            git rm -rf .
+            echo "Initial commit" > index.html
+            git add index.html
+            git commit -m "Initial gh-pages commit"
+            git push origin gh-pages
+            git checkout main
+          fi
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs       # 推荐使用子目录
-          publish_branch:gh-pages      # 部署到main分支
+          publish_branch: gh-pages
           force_orphan: true  # 确保每次都是干净部署
