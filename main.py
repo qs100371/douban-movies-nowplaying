@@ -286,7 +286,7 @@ def generate_html(movies):
     
     update_time = get_beijing_time()
     movies_html = ""
-    for movie in movies:
+    for movie in movies[0:20]:
         movie_html = f"""
         <div class="movie-card">
             <img class="movie-poster" src="{movie.get('poster', '')}" alt="{movie.get('title', '')}">
