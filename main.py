@@ -193,13 +193,22 @@ def generate_html(movies):
     full_html = html_template.format(movies_html=movies_html, update_time=update_time)
     return full_html
 
-def save_html(html_content, filename="douban_hot_movies.html"):
-    """
-    将HTML内容保存到文件
-    """
-    with open(filename, 'w', encoding='utf-8') as f:
+
+
+import pytz
+from datetime import datetime
+
+def save_html(html_content, filename="docs/douban_movies.html"):
+    os.makedirs("docs", exist_ok=True)
+    with open(filename, "w", encoding="utf-8") as f:
         f.write(html_content)
-    print(f"HTML文件已生成: {filename}")
+
+def get_beijing_time():
+    tz = pytz.timezone('Asia/Shanghai')
+    return datetime.now(tz).strftime('%Y-%m-%d %H:%M:%S')
+
+# 在生成HTML时使用
+update_time = get_beijing_time()
 
 if __name__ == "__main__":
     print("正在获取豆瓣热映电影信息...")
