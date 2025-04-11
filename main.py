@@ -238,7 +238,9 @@ def generate_html(movies):
 </nav>
 <div id="main">
 						<div class="inner">
-             <h1>🎬 豆瓣热映电影</h1>
+             <h2 class="tags-title">
+                🎬 豆瓣热映电影
+              </h2>
               <div class="tags-container">
                
         <div class="movie-container">
@@ -278,16 +280,6 @@ def generate_html(movies):
     </div>
   </body>
 </html>
-
-        <h1>🎬 豆瓣热映电影</h1>
-        <div class="movie-container">
-            {movies_html}
-        </div>
-        <div class="footer">
-            数据来源: 豆瓣电影 | 更新时间: {update_time}
-        </div>
-    </body>
-    </html>
     """
     
     from datetime import datetime
