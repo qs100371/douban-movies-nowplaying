@@ -2,7 +2,7 @@ name: Deploy Douban Movies
 
 on:
   schedule:
-    - cron: '0 22 * * *'  # 北京时间每天6点（UTC 22:00）
+    - cron: '0 4,10,16,22 * * *'  # 北京时间每天6点（UTC 22:00）
   workflow_dispatch:      # 允许手动触发
   push:
     branches: [ main ]   # 推送时触发
