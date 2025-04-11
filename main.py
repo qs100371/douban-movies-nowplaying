@@ -72,7 +72,16 @@ def generate_html(movies):
         <meta charset="UTF-8">
         <meta name="referrer" content="no-referrer">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>豆瓣热映电影</title>
+       <meta name="description" content="It&#39;s just a note, not a guide." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="baidu-site-verification" content="codeva-LhXgKgQNnq" />
+<meta name="keywords" content="linux onecloud armbian docker 学习笔记 个人博客">
+<title> The blog of qs</title>
+<link rel="shortcut icon" href="https://qs100371.vip/favicon.ico">
+
+<link rel="stylesheet" href="https://qs100371.vip/styles/main.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="6e0a4c7e-ee80-4e33-aca1-db6b188445b7"></script>
+<script src="/media/scripts/Valine.min.js" ></script>
         <style>
             body {{
                 font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -155,7 +164,121 @@ def generate_html(movies):
             }}
         </style>
     </head>
-    <body>
+    <body class="is-preload">
+    <!-- Wrapper -->
+			<div id="wrapper">
+      <!-- Header -->
+<header id="header">
+  <div class="inner">
+    <!-- Logo -->
+    <a href="https://qs100371.vip" class="logo">
+      <span class="symbol"
+        ><img
+          src="https://qs100371.vip/images/avatar.png"
+          alt=""
+        />
+      </span>
+      <div class="site-title"> The blog of qs </div>
+    </a>
+
+    <!-- Nav -->
+    <nav>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+  <ul>
+    
+    
+      <li><a href="/" class="menu">
+        首页
+      </a></li>
+      
+    
+    
+      <li><a href="/archives" class="menu">
+        归档
+      </a></li>
+      
+    
+    
+      <li><a href="/tags" class="menu">
+        标签
+      </a></li>
+      
+    
+    
+      <li><a href="https://t.qs100371.vip" class="menu" target="_blank">
+        笔记
+      </a></li>
+    
+    
+    
+      <li><a href="https://m.qs100371.vip/u/guest" class="menu" target="_blank">
+        日常
+      </a></li>
+    
+    
+    
+      <li><a href="https://w.qs100371.vip" class="menu">
+        文字版
+      </a></li>
+      
+    
+    <li>
+    <form id="gridea-search-form" action="https://qs100371.vip/search/">
+      <input name="q" placeholder="搜索文章" />
+    </form></li>
+  </ul>
+</nav>
+<div id="main">
+						<div class="inner">
+             <h1>🎬 豆瓣热映电影</h1>
+              <div class="tags-container">
+               
+        <div class="movie-container">
+            {movies_html}
+        </div>
+        <div class="footer">
+            数据来源: 豆瓣电影 | 更新时间: {update_time}
+        </div>  
+                  
+                
+              </div>
+    
+            </div>
+					</div>
+
+        <!-- Footer -->
+<footer id="footer">
+  <div class="inner">
+    
+    <ul class="copyright">
+     
+      ©2025   <a href="mailto:admin@qs100371.vip">qs100371.vip</a>
+      
+    </ul>
+  </div>
+</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="https://qs100371.vip/media/scripts/jquery.min.js"></script>
+			<script src="https://qs100371.vip/media/scripts/browser.min.js"></script>
+			<script src="https://qs100371.vip/media/scripts/breakpoints.min.js"></script>
+			<script src="https://qs100371.vip/media/scripts/util.js"></script>
+			<script src="https://qs100371.vip/media/scripts/main.js"></script>
+
+      </div>
+    </div>
+  </body>
+</html>
+
         <h1>🎬 豆瓣热映电影</h1>
         <div class="movie-container">
             {movies_html}
