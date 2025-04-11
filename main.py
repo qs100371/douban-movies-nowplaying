@@ -315,7 +315,7 @@ def generate_html(movies):
 
 from datetime import datetime
 
-def save_html(html_content, filename="docs/douban_movies.html"):
+def save_html(html_content, filename="index.html"):
     
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html_content)
@@ -324,8 +324,7 @@ def get_beijing_time():
     tz = pytz.timezone('Asia/Shanghai')
     return datetime.now(tz).strftime('%Y-%m-%d %H:%M:%S')
 
-# 在生成HTML时使用
-update_time = get_beijing_time()
+
 
 if __name__ == "__main__":
     print("正在获取豆瓣热映电影信息...")
