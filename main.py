@@ -1,4 +1,3 @@
-import os
 import pytz
 import requests
 from bs4 import BeautifulSoup
@@ -72,16 +71,16 @@ def generate_html(movies):
         <meta charset="UTF-8">
         <meta name="referrer" content="no-referrer">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <meta name="description" content="It&#39;s just a note, not a guide." />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="baidu-site-verification" content="codeva-LhXgKgQNnq" />
-<meta name="keywords" content="linux onecloud armbian docker 学习笔记 个人博客">
-<title>豆瓣热映电影 | The blog of qs</title>
-<link rel="shortcut icon" href="https://qs100371.vip/favicon.ico">
+       	<meta name="description" content="It&#39;s just a note, not a guide." />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="baidu-site-verification" content="codeva-LhXgKgQNnq" />
+	<meta name="keywords" content="linux onecloud armbian docker 学习笔记 个人博客">
+	<title>豆瓣热映电影 | The blog of qs</title>
+	<link rel="shortcut icon" href="https://qs100371.vip/favicon.ico">
 
-<link rel="stylesheet" href="https://qs100371.vip/styles/main.css">
-<script defer src="https://cloud.umami.is/script.js" data-website-id="6e0a4c7e-ee80-4e33-aca1-db6b188445b7"></script>
-<script src="/media/scripts/Valine.min.js" ></script>
+	<link rel="stylesheet" href="https://qs100371.vip/styles/main.css">
+	<script defer src="https://cloud.umami.is/script.js" data-website-id="6e0a4c7e-ee80-4e33-aca1-db6b188445b7"></script>
+	<script src="/media/scripts/Valine.min.js" ></script>
         <style>
             body {{
                 font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -283,7 +282,7 @@ def generate_html(movies):
     """
     
     from datetime import datetime
-    update_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    
     update_time = get_beijing_time()
     movies_html = ""
     for movie in movies:
@@ -317,7 +316,7 @@ def generate_html(movies):
 from datetime import datetime
 
 def save_html(html_content, filename="docs/douban_movies.html"):
-    os.makedirs("docs", exist_ok=True)
+    
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html_content)
 
