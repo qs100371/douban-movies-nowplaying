@@ -76,7 +76,7 @@ def generate_html(movies):
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="codeva-LhXgKgQNnq" />
 <meta name="keywords" content="linux onecloud armbian docker 学习笔记 个人博客">
-<title> The blog of qs</title>
+<title>豆瓣热映电影 | The blog of qs</title>
 <link rel="shortcut icon" href="https://qs100371.vip/favicon.ico">
 
 <link rel="stylesheet" href="https://qs100371.vip/styles/main.css">
