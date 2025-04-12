@@ -283,12 +283,7 @@ def generate_html(movies):
     """
     
     from datetime import datetime
-    while len(movies) < 20:
-     movies.append({
-        'title': '即将上映',
-        'score': '0.0',
-        'poster': 'placeholder.jpg'
-     })
+    
     update_time = get_beijing_time()
     movies_html = ""
     for movie in movies[0:20]:
