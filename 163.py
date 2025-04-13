@@ -103,7 +103,7 @@ def generate_html(news_list):
             <h1>网易新闻</h1>
     """
     
-    for news in news_list:
+    for news in news_list[0:20]:
         html_content += f"""
             <div class="news-item">
                 <a href="{news['url']}" target="_blank">{news['title']}</a>
@@ -112,7 +112,7 @@ def generate_html(news_list):
     
     html_content += f"""
             <div class="footer">
-                新闻来源：网易 | 抓取时间：{current_time}| 共 {len(news_list)} 条
+                新闻来源：网易 | 抓取时间：{current_time}
             </div>
         </div>
     </body>
