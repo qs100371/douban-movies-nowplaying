@@ -42,5 +42,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs       # 推荐使用子目录
-          publish_branch: gh-pages      # 部署到main分支
-          force_orphan: true  # 确保分支干净     
+          publish_branch: gh-pages      # 部署到gh-pages分支
+          force_orphan: false  # 确保分支干净     
