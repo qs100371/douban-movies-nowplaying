@@ -1,7 +1,12 @@
 import requests
 import os
+import pytz
 from bs4 import BeautifulSoup
 from datetime import datetime
+
+def get_beijing_time():
+    tz = pytz.timezone('Asia/Shanghai')
+    return datetime.now(tz).strftime('%Y-%m-%d %H:%M:%S')
 
 def crawl_163_news():
     # 请求网易新闻首页
@@ -40,8 +45,7 @@ def crawl_163_news():
 
 def generate_html(news_list):
     # 获取当前时间
-    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    
+    current_time = get_beijing_time()
     # 生成HTML文件
     html_content = """
     <!DOCTYPE html>
