@@ -160,7 +160,7 @@ def generate_html(movies):
             {movies_html}
         </div>
         <div class="footer">
-            数据来源: 豆瓣电影 | 更新时间: {update_time}
+            数据来源: 豆瓣电影 | 更新时间: {update_time} | 共 {len(movies)} 条 
         </div>
     </body>
     </html>
@@ -171,7 +171,7 @@ def generate_html(movies):
     
     update_time = get_beijing_time()
     movies_html = ""
-    for movie in movies[0:20]:
+    for movie in movies:
         movie_html = f"""
         <div class="movie-card">
             <img class="movie-poster" src="{movie.get('poster', '')}" alt="{movie.get('title', '')}">
