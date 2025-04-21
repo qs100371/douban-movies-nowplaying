@@ -156,12 +156,12 @@ def generate_html(movies):
         </style>
     </head>
     <body>
-        <h1>🎬 豆瓣热映</h1>    <h1><a href="https://qs100371.vip/douban.html">🎬 我的豆瓣</a></h1>
+        <h1>🎬 豆瓣热映</h1>    
         <div class="movie-container">
             {movies_html}
         </div>
         <div class="footer">
-            数据来源: 豆瓣电影 | 更新时间: {update_time} 
+            数据来源: 豆瓣电影 | 更新时间: {update_time} |<a href="https://qs100371.vip/douban.html">我的豆瓣</a>
         </div>
     </body>
     </html>
