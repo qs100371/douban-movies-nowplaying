@@ -156,7 +156,7 @@ def generate_html(movies):
         </style>
     </head>
     <body>
-        <h1>🎬 豆瓣热映电影</h1>
+        <h1>🎬 豆瓣热映</h1>    <h1><a href="https://qs100371.vip/douban.html">🎬 我的豆瓣</a></h1>
         <div class="movie-container">
             {movies_html}
         </div>
