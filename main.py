@@ -202,7 +202,7 @@ def generate_html(movies):
 
 from datetime import datetime
 
-def save_html(html_content, filename="docs/index.html"):
+def save_html(html_content, filename="docs/douban.html"):
     os.makedirs("docs", exist_ok=True)
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html_content)
